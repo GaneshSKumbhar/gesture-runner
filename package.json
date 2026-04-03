@@ -1,0 +1,21 @@
+{
+  "name": "gesture-runner",
+  "version": "1.0.0",
+  "description": "Hand gesture controlled endless runner game",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "bridge": "python server.py",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@mediapipe/hands": "^0.4.1675469240",
+    "@mediapipe/camera_utils": "^0.3.1675466862",
+    "@mediapipe/drawing_utils": "^0.3.1675466124"
+  }
+}
+

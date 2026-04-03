@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gesture Bridge</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <div class="fullscreen-camera" id="cameraSection">
+    <video id="camVideo" autoplay muted playsinline></video>
+    <canvas id="camCanvas" width="640" height="480"></canvas>
+    <div id="gestureFlash" class="gesture-flash hidden"></div>
+  </div>
+
+  <div class="overlay-container">
+    
+    <!-- Top Status Bar + Game Toggle -->
+    <div class="top-bar glass-panel">
+      <div class="branding">
+        <h1>🏃 Gesture Bridge</h1>
+      </div>
+      
+      <!-- New Mode Switcher -->
+      <div class="game-toggle">
+        <button id="btnSubway" class="mode-btn active">Subway Surfers</button>
+        <button id="btnHill" class="mode-btn">Hill Climb</button>
+      </div>
+
+      <div class="status-group">
+        <div class="status-indicator">
+          <span class="dot" id="serverStateDot"></span>
+          <span id="serverStatusText">Waiting...</span>
+        </div>
+        <div class="status-indicator">
+          <span class="dot cam-dot" id="camStatusBox"></span>
+          <span id="camStatus">Initializing...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gesture Instructions -->
+    <div class="instructions-overlay glass-panel">
+      <ul class="gesture-list" id="gestureList">
+        <!-- Replaced via JavaScript depending on the selected mode -->
+      </ul>
+    </div>
+
+  </div>
+
+  <div id="camError" class="glass-panel hidden" style="position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); padding:2rem; z-index:20;">
+    <h2>📷 Camera Access Denied</h2>
+    <p>Please allow camera permissions and refresh.</p>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
