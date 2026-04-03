@@ -111,6 +111,29 @@ The terminal running `server.py` will log all matched gesture inputs in real-tim
 2. **WebSocket Bridge:** Hand action data stream is packaged into JSON messages and routed instantly locally to the Python server.
 3. **Automated Input:** The Python server parses JSON and triggers `pydirectinput`, simulating physical keyboard strokes recognized by standalone PC games.
 
+## 📁 Project Structure
+
+```text
+gesture-runner/
+├── images/             # Visual demos and UI screenshots
+│   ├── gestureGame.mp4 # Demo video file
+│   └── *.png           # Application screenshots
+├── public/             # Static web assets
+├── src/                # Frontend source code
+│   ├── gesture/        # AI Hand tracking & gesture classification
+│   │   ├── CameraFeed.js
+│   │   ├── GestureEngine.js
+│   │   └── HandClassifier.js
+│   ├── config.js       # Global app settings/key mappings
+│   ├── main.js         # WebSocket client & UI controller
+│   └── style.css       # Frontend styling
+├── index.html          # Browser entry point
+├── package.json        # Dependencies (Vite, etc.)
+├── server.py           # Python WebSocket server & Robot controller
+├── vite.config.js      # Build tool configuration
+└── README.md           # Documentation
+```
+
 ---
 
 ## 🤝 Contributing
