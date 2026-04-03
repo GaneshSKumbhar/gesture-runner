@@ -33,9 +33,8 @@ Welcome to the **Gesture-Controlled PC Game Bridge**! This project replaces stat
 ### Short Demo Video
 *Watch the gesture bridge in action!*
 
-<video src="./images/gestureGame.mp4" controls="controls" style="max-width: 100%;">
-  Your browser does not support the video tag.
-</video>
+[![Watch the Demo Video](./images/subway.png)](./images/gestureGame.mp4)
+*Click the image above to watch the gesture bridge in action!*
 
 ---
 
